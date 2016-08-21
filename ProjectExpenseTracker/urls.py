@@ -16,6 +16,17 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from ExpenseTracker.views import *
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', login),
+    url(r'^signup/', signup),
+    url(r'^newexpense/', create_new_expense),
+    url(r'^dayexpense/', view_day_expense),
+    url(r'^weekexpense/', view_week_expense),
+    url(r'^monthexpense/', view_month_expense),
+    url(r'^expensehistory/', view_expense_history),
+    url(r'^about/', view_about),
+    url(r'^profile/', view_profile)
 ]
