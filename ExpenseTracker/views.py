@@ -5,32 +5,31 @@ from django.shortcuts import render_to_response
 
 
 def login(request):
-
-    return render_to_response("base_future_time.html", {"new_time": new_time, "offset": offset})
+    return render_to_response("base_login.html")
 
 
 def signup(request):
-    pass
+    return render_to_response("base_signup.html")
 
 
 def create_new_expense(request):
-    pass
+    return render_to_response("base_new_expense.html")
 
 
 def view_day_expense(request):
-    pass
+    return render_to_response("base_day_expense.html")
 
 
 def view_week_expense(request):
-    pass
+    return render_to_response("base_week_expense.html")
 
 
 def view_month_expense(request):
-    pass
+    return render_to_response("base_month_expense.html")
 
 
 def view_expense_history(request):
-    pass
+    return render_to_response("base_expense_history.html")
 
 
 def view_about(request):
