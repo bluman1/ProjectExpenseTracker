@@ -14,19 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
 
 from ExpenseTracker.views import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^login/', login),
-    url(r'^signup/', signup),
-    url(r'^newexpense/', create_new_expense),
-    url(r'^dayexpense/', view_day_expense),
-    url(r'^weekexpense/', view_week_expense),
-    url(r'^monthexpense/', view_month_expense),
-    url(r'^expensehistory/', view_expense_history),
-    url(r'^about/', view_about),
-    url(r'^profile/', view_profile)
+    # url(r'^admin/', admin.site.urls),
+
+    url(r'^$', show_home),
+    url(r'^login/$', show_login),
+    url(r'^signup/$', show_signup),
+    url(r'^history/', show_expense_history),
+
+    url(r'^profile/', show_profile),
+
+    url(r'^logout/', show_logout),
 ]
